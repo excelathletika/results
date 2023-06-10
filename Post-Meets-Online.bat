@@ -1,6 +1,6 @@
 @echo off
 REM Simple batch file to post results online
-REM
+REM Used to push resutls
 
 set GIT_PATH="C:\Program Files\Git\bin\git.exe"
 
