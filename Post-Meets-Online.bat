@@ -12,18 +12,21 @@ REM ============================================================
 REM Change this to the year and directory that you wish to post results
 REM locally on your computer.
 set MEET_YEAR="2023"
-set MEET_CURRENT_DIR="TrialsMeet"
+set MEET_CURRENT_DIR="TestMeet"
 REM ============================================================
 
-set TARGET=%MEET_PATH%\%MEET_YEAR%\%MEET_CURRENT_DIR%\
+SET TARGET=%MEET_PATH%\%MEET_YEAR%\%MEET_CURRENT_DIR%\
 
+ECHO "Pushing results to the web"
+
+REM If the target directory exists then copy the files from the local 
+REM directory used by FinishLynx to post results
 If exist %TARGET% (
   XCOPY C:\realtime %TARGET%   /s /e /k /y
-  %GIT_PATH% add -A
-  %GIT_PATH% commit -am "Auto-committed on %date%"
-  %GIT_PATH% push -u origin main
-  ECHO "Exists"
 ) else (
-  ECHO You need to create the target Meet directory: %TARGET%
+  MKDIR %TARGET%
 )
 
+%GIT_PATH% add -A
+%GIT_PATH% commit -am "Auto-committed on %date%"
+%GIT_PATH% push -u origin main
