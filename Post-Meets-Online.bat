@@ -17,6 +17,9 @@ REM ============================================================
 
 SET TARGET=%MEET_PATH%\%MEET_YEAR%\%MEET_CURRENT_DIR%\
 
+REM Pull any changes made to the remote to ensure we are in sync.
+%GIT_PATH% pull -q
+
 REM If the target doesn't exist create it
 If not exist %TARGET% (
   ECHO Creating target location...
