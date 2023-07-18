@@ -12,7 +12,7 @@ REM ============================================================
 REM Change this to the year and directory that you wish to post results
 REM locally on your computer.
 set MEET_YEAR="2023"
-set MEET_CURRENT_DIR="TestMn3"
+set MEET_CURRENT_DIR="YourMeetName"
 REM ============================================================
 
 SET TARGET=%MEET_PATH%\%MEET_YEAR%\%MEET_CURRENT_DIR%\
