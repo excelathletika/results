@@ -18,13 +18,13 @@ REM ============================================================
 SET TARGET=%MEET_PATH%\%MEET_YEAR%\%MEET_CURRENT_DIR%\
 
 REM If the target doesn't exist create it
-If exist %TARGET% (
+If not exist %TARGET% (
   ECHO Creating target location...
   MKDIR %TARGET%
 )
 ECHO Copying files from HyTek...
 XCOPY C:\realtime %TARGET%   /s /e /k /y /q
 ECHO Pushing results to the web...
-REM %GIT_PATH% add -A
-REM %GIT_PATH% commit -am "Auto-committed on %date%"
-REM %GIT_PATH% push -u origin main
+%GIT_PATH% add -A
+%GIT_PATH% commit -am "Auto-committed on %date%"
+%GIT_PATH% push -u origin main
