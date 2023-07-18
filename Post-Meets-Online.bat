@@ -5,7 +5,7 @@ REM Meet Manager posts the results locally.  Then we use GIT to
 REM post the results online to a GIT Repo.
 REM Important - The target directory must exist to be successful
 
-set MEET_PATH="C:\MeetResultsWeb\Meets\"
+set MEET_PATH="C:\MeetResultsWeb\Meets\results\Meets\"
 set GIT_PATH="C:\Program Files\Git\bin\git.exe"
 
 REM ============================================================
@@ -17,16 +17,14 @@ REM ============================================================
 
 SET TARGET=%MEET_PATH%\%MEET_YEAR%\%MEET_CURRENT_DIR%\
 
-ECHO "Pushing results to the web"
-
-REM If the target directory exists then copy the files from the local 
-REM directory used by FinishLynx to post results
+REM If the target doesn't exist create it
 If exist %TARGET% (
-  XCOPY C:\realtime %TARGET%   /s /e /k /y
-) else (
+  ECHO Creating target location...
   MKDIR %TARGET%
 )
-
-%GIT_PATH% add -A
-%GIT_PATH% commit -am "Auto-committed on %date%"
-%GIT_PATH% push -u origin main
+ECHO Copying files from HyTek...
+XCOPY C:\realtime %TARGET%   /s /e /k /y /q
+ECHO Pushing results to the web...
+REM %GIT_PATH% add -A
+REM %GIT_PATH% commit -am "Auto-committed on %date%"
+REM %GIT_PATH% push -u origin main
