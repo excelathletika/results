@@ -10,7 +10,7 @@ set GIT_PATH="C:\Program Files\Git\bin\git.exe"
 
 REM ============================================================
 REM Change this to the year and directory that you wish to post results
-REM locally on your computer.
+REM locally on your computer.  The target location will be created automatically.
 set MEET_YEAR="2023"
 set MEET_CURRENT_DIR="YourMeetName"
 REM ============================================================
