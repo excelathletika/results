@@ -5,7 +5,7 @@ REM Meet Manager posts the results locally.  Then we use GIT to
 REM post the results online to a GIT Repo.
 
 REM Establish default values 
-set MEET_PATH="C:\MeetResultsWeb\Meets\results\Meets\"
+set MEET_PATH="C:\MeetResultsWeb\Meets\"
 set GIT_PATH="C:\Program Files\Git\bin\git.exe"
 
 REM ============================================================
@@ -13,7 +13,7 @@ REM Change this to the year and directory that you wish to post results
 REM locally on your computer.  The target location will be created automatically.
 REM Please do not use spaces in names. Instead use Pascal case eg: YourMeetName
 set MEET_YEAR="2023"
-set MEET_CURRENT_DIR="YourMeetName"
+set MEET_CURRENT_DIR="CanWestChallenge"
 REM ============================================================
 SET TARGET=%MEET_PATH%\%MEET_YEAR%\%MEET_CURRENT_DIR%\
 
