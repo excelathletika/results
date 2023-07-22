@@ -5,7 +5,7 @@ REM Meet Manager posts the results locally.  Then we use GIT to
 REM post the results online to a GIT Repo.
 
 REM Establish default values 
-set MEET_PATH="C:\MeetResultsWeb\Meets\"
+set MEET_PATH="C:\MeetResultsWeb\results\Meets\"
 set GIT_PATH="C:\Program Files\Git\bin\git.exe"
 
 REM ============================================================
