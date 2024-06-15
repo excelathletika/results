@@ -13,7 +13,7 @@ REM Change this to the year and directory that you wish to post results
 REM locally on your computer.  The target location will be created automatically.
 REM Please do not use spaces in names. Instead use Pascal case eg: YourMeetName
 set MEET_YEAR="2024"
-set MEET_CURRENT_DIR="ReginaSpringClassic"
+set MEET_CURRENT_DIR="TrialsMeet"
 REM ============================================================
 SET TARGET=%MEET_PATH%\%MEET_YEAR%\%MEET_CURRENT_DIR%\
 
